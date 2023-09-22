@@ -1,3 +1,11 @@
+// 登录
+var loginButton = document.getElementsByClassName('loginButton')[0];
+var masking = document.getElementsByClassName('masking')[0];
+loginButton.onclick = function () {
+    masking.style.display = 'block';
+}
+
+
 // 登录验证
 // 手机号
 var telephone = document.getElementById('telephone');
@@ -55,7 +63,7 @@ verificationButton.onclick = function () {
             if (num == 50) {
                 randoms = parseInt(Math.random() * 10000);
                 randoms = randoms < 1000 ? randoms + 1000 : randoms;
-                console.log(randoms);
+                alert(randoms)
             }
             if (num < 0) {
                 clearInterval(timer);
@@ -161,7 +169,7 @@ logup.onclick = function () {
         checkCodeText.style.color = 'red'
         checkCodeText.innerHTML = '校验码不能为空，请重新输入';
         checkCodeJudge = false;
-    } else if (verificationButton.value == '') {
+    } else if (verificationCode.value == '') {
         verificationCodeText.style.color = 'red';
         verificationCodeText.innerHTML = '验证码输入不能为空，请重新输入';
         verificationCodeJudge = false;
@@ -178,9 +186,9 @@ logup.onclick = function () {
         verifyPasswordText.innerHTML = '重复密码不能为空，请重新输入';
         verifyPasswordJudge = false;
     } else if (telephoneJudge == true && checkCodeJudge == true && verificationCodeJudge == true && userJudge == true && passwordJudge == true && verifyPasswordJudge == true) {
-        document.cookie = `tel=${telephone.value}`;
-        document.cookie = `user=${user.value}`;
-        document.cookie = `password=${password.value}`;
+        sessionStorage.setItem('tel', telephone.value);
+        sessionStorage.setItem('user', user.value);
+        sessionStorage.setItem('password', password.value);
         alert('注册成功!');
         telephone.value = '';
         checkCode.value = '';
@@ -188,5 +196,6 @@ logup.onclick = function () {
         user.value = '';
         password.value = '';
         verifyPassword.value = '';
+        location.href = ("../index.html")
     }
 }
