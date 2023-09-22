@@ -80,7 +80,6 @@ header {
                 width: 24px;
                 height: 26px;
                 background: url(./img/search.png) no-repeat;
-                margin-right: 30px;
                 transition: all 0.08s;
 
                 &:hover {
@@ -88,7 +87,8 @@ header {
                 }
             }
 
-            >a:nth-of-type(2) {
+            >a:nth-of-type(2),
+            >a:nth-of-type(3) {
                 font-size: 16px;
                 width: 50px;
                 line-height: 30px;
@@ -96,6 +96,7 @@ header {
                 text-align: center;
                 border-radius: 3px;
                 color: #fe5341;
+                margin-left: 20px;
 
                 &:hover {
                     background-color: #fe5341;

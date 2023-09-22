@@ -79,7 +79,6 @@ header > .headerBox > div:nth-of-type(2) > a:nth-of-type(1) {
   width: 24px;
   height: 26px;
   background: url(./img/search.png) no-repeat;
-  margin-right: 30px;
   transition: all 0.08s;
 }
 
@@ -87,7 +86,8 @@ header > .headerBox > div:nth-of-type(2) > a:nth-of-type(1):hover {
   transform: scale(1.1);
 }
 
-header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2) {
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2),
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(3) {
   font-size: 16px;
   width: 50px;
   line-height: 30px;
@@ -95,9 +95,11 @@ header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2) {
   text-align: center;
   border-radius: 3px;
   color: #fe5341;
+  margin-left: 20px;
 }
 
-header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2):hover {
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2):hover,
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(3):hover {
   background-color: #fe5341;
   color: #fff;
   transition: all 0.2s;

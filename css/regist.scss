@@ -74,6 +74,7 @@ header {
                 width: 24px;
                 height: 26px;
                 background: url(./img/search.png) no-repeat;
+                margin-right: 30px;
                 transition: all 0.08s;
 
                 &:hover {
@@ -81,8 +82,7 @@ header {
                 }
             }
 
-            >a:nth-of-type(2),
-            a:nth-of-type(3) {
+            >a:nth-of-type(2) {
                 font-size: 16px;
                 width: 50px;
                 line-height: 30px;
@@ -90,7 +90,6 @@ header {
                 text-align: center;
                 border-radius: 3px;
                 color: #fe5341;
-                margin-left: 20px;
 
                 &:hover {
                     background-color: #fe5341;
@@ -102,106 +101,112 @@ header {
     }
 }
 
-/*正文 */
+/* 正文 */
 main {
     width: 100%;
     display: flex;
-    margin: 50px;
     justify-content: center;
+    background-color: #f7f7f7;
+    padding: 25px 0px 35px;
 
-    /* 版心 */
-    .content {
+    .conteiner {
         width: 1000px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border: 1px #d7d7d7 solid;
+        border-radius: 8px;
 
-        >aside,
-        article {
-            background-color: #f3f3f3;
-            border-radius: 5px;
+        >h2 {
+            width: 100%;
+            font-size: 20px;
+            color: #474747;
+            font-weight: 500;
+            padding-left: 20px;
+            border-left: 6px solid #fe5341;
+            margin: 20px 0px;
             box-sizing: border-box;
-
-            >h2 {
-                color: #444;
-                font-size: 20px;
-                line-height: 38px;
-                font-weight: 900;
-                border-bottom: 1px solid #a0a0aa;
-                padding-left: 18px;
-            }
-
         }
 
-        >aside {
-            padding: 25px 20px;
-            width: 270px;
-            height: 315px;
+        >form {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 600px;
+            margin: 50px 0px 150px;
 
-            >dl {
-                padding: 10px 18px;
-                line-height: 27px;
+            >div {
+                display: flex;
+                flex-direction: column;
 
-                >dt {
+                >div {
+                    display: flex;
+                    justify-content: space-between;
 
-                    >a {
-                        font-weight: 900;
-                        color: #535353;
+                    >input {
+                        width: 100%;
+                        background-color: #f7f7f7;
+                        color: #a3a3a3;
+                        height: 50px;
+                        border: 1px #eee solid;
+                        border-radius: 10px;
+                        text-indent: 1em;
+                        font-size: 16px;
                     }
+
+                    >#checkCode,
+                    >#verificationCode {
+                        width: 230px;
+                    }
+
+                    >img {
+                        width: 132px;
+                        height: 35px;
+                    }
+
+                    >#verificationButton {
+                        width: 132px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        color: #a3a3a3;
+                        border: 1px #a3a3a3 solid;
+                        border-radius: 10px;
+                        background-color: transparent;
+                        cursor: pointer;
+                        text-indent: 0px;
+                    }
+
                 }
 
-                >dd {
-                    padding-left: 15px;
-
-                    >a {
-                        color: #535353;
-                    }
-                }
-            }
-        }
-
-        >article {
-            padding: 25px 33px;
-            width: 700px;
-            color: #535353;
-
-            >h2 {
-                padding: 0;
-            }
-
-            >h3 {
-                margin: 25px 0 20px;
-                font-size: 16px;
-
-            }
-
-            >h3:nth-of-type(2),
-            >h3:nth-of-type(3) {
-                margin-top: 50px;
-            }
-
-            >p {
-                line-height: 30px;
-            }
-
-            >dl {
-                padding-top: 18px;
-
-                >dt {
-                    color: #474747;
+                >#logup {
+                    width: 100%;
+                    background: #fe5341;
+                    color: #fff;
+                    cursor: pointer;
+                    text-align: center;
+                    line-height: 50px;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
                     font-size: 20px;
-                    font-weight: 800;
-                    margin-bottom: 18px;
+
+                    &:hover {
+                        background-color: #fd301b;
+                    }
                 }
 
-                >dd {
-                    margin-left: 25px;
-                    line-height: 26px;
+                >p {
+                    width: 100%;
+                    height: 20px;
+                    font-size: 12px;
                 }
             }
         }
     }
 }
-
 
 /* 底部 */
 footer {

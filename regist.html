@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页</title>
-    <link rel="stylesheet" href="./css/index.min.css">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/regist.min.css">
 </head>
 
 <body>
@@ -31,14 +31,65 @@
             <!-- 搜索、注册 -->
             <div>
                 <a href="#"></a>
-                <a href="#">登录</a>
                 <a href="./regist.html">注册</a>
             </div>
         </div>
     </header>
+    <!-- 正文 -->
+    <main>
+        <div class="conteiner">
+            <h2>注册极果</h2>
+            <form action="./index.html">
+                <div>
+                    <div>
+                        <input type="tel" name="telephone" id="telephone" placeholder="请输入登录的手机号" maxlength="11">
+                    </div>
+                    <p class="telephoneText"></p>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="checkCode" id="checkCode" placeholder="请输入图片校证码" maxlength="4">
+                        <img src="./img/imgCode.jpg" alt="">
+                    </div>
+                    <p class="checkCodeText"></p>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="verificationCode" id="verificationCode" placeholder="请输入4位数字验证码"
+                            maxlength="4">
+                        <input type="button" name="verificationButton" id="verificationButton" value="获取验证码">
+                    </div>
+                    <p class="verificationCodeText"></p>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="user" id="user" placeholder="请输入用户名" maxlength="14" minlength="7">
+                    </div>
+                    <p class="userText"></p>
+                </div>
+                <div>
+                    <div>
+                        <input type="password" name="password" id="password" placeholder="请输入新密码" maxlength="14">
+                    </div>
+                    <p class="passwordText"></p>
+                </div>
+                <div>
+                    <div>
+                        <input type="password" name="verifyPassword" id="verifyPassword" placeholder="确定新密码"
+                            maxlength="14">
+                    </div>
+                    <p class="verifyPasswordText"></p>
+                </div>
+                <div>
+                    <button class="logup" id="logup">立即注册</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
     <!-- 底部 -->
     <footer>
-        <div class="footertop">
+        <div class=" footertop">
             <dl>
                 <img src="./img/code.png" alt="">
             </dl>
@@ -151,3 +202,4 @@
 </body>
 
 </html>
+<script src="./js/regist.js"></script>
