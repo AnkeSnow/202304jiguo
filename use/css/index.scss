@@ -1,3 +1,24 @@
+header {
+    >.headerBox {
+        >nav {
+            >ul {
+                >li:nth-of-type(1) {
+                    >a {
+                        color: black;
+                    }
+                }
+
+                >li:nth-of-type(4) {
+                    >a {
+                        color: #fe5341;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /* 免费试用 */
 nav {
     width: 100%;
