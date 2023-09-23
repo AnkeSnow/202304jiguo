@@ -2,10 +2,10 @@ window.onload = function () {
     setTimeout(getData, 10);
 };
 //试用页面渲染数据
-var ul_ = document.querySelector('.mind');
+var ul_ = document.getElementsByClassName('mind');
 function getData() {
     var ajax_ = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
-    ajax_.open("get", "http://127.0.0.1:3000/useing/master");
+    ajax_.open("get", "http://127.0.0.1:3000/useing/public");
     ajax_.send();
     ajax_.onreadystatechange = function () {
         if (ajax_.readyState == 4) {
@@ -34,7 +34,7 @@ function show(val) {
         // console.log(data[i].txt);
         str += `<li>
                 <a href="#">
-                    <span class="shoufa">体验师专享</span>
+                    <span class="shoufa">${val[i].info_ty}</span>
                     <img src="${val[i].img}" alt="">
                     <div class="etp_box">
                         <h2>${val[i].text}</h2>
@@ -50,26 +50,8 @@ function show(val) {
                 </a>
             </li>`;
     }
-    for (var y = 0; y < 2; y++) {
-        str += `<li>
-                <a href="javaScript:;">
-                    <div class="etp_box">
-                        <h2></h2>
-                        <div class="sq">
-                        </div>
-                        <span></span>
-                    </div>
-                </a>
-            </li>`;
-    }
-    ul_.innerHTML = str;
-    /* 首发体验师样式 */
-    for (var item of ul_.children) {
-        var shoufa = item.firstElementChild.firstElementChild;
-        if (shoufa.innerHTML == '体验师专享') {
-            shoufa.className = 'shoufa1';
-        }
-    }
+    ul_[0].innerHTML = str;
+    ul_[1].innerHTML = str;
 }
 function show1() {
     var etp = document.querySelector('.etp');

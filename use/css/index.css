@@ -65,6 +65,7 @@ nav div a:first-child {
 /* 产品展示 */
 .etp {
   width: 100%;
+  height: 993px;
   background-color: #f7f7f7;
   overflow: hidden;
 }
@@ -185,4 +186,28 @@ nav div a:first-child {
 .spanRed {
   color: #fe5341 !important;
   border-color: #fe5341 !important;
+}
+
+/* 触底加载 */
+.more {
+  width: 100%;
+  margin: auto;
+  background-color: #f7f7f7;
+  padding: 10px 0 50px 0;
+}
+
+.more p {
+  text-align: center;
+  width: 120px;
+  margin: auto;
+  cursor: pointer;
+  color: #a3a3a3;
+}
+
+.more p img {
+  margin-right: 8px;
+}
+
+.more p span {
+  color: #fe5341;
 }

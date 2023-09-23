@@ -46,7 +46,7 @@ login_Button.onclick = function () {
         setTimeout(function () {
             loginUserText.style.opacity = '0';
         }, 3000)
-    } else if (loginPassword.value == password) {
+    } else if (loginPassword.value != password) {
         passwordText.style.opacity = '1';
         passwordText.innerHTML = '密码错误';
         setTimeout(function () {
