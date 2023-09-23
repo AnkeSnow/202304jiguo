@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+li:nth-of-type(1)>a {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 头部 */
+header {
+    width: 100%;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #cecfcf;
+    box-shadow: 0 0 5px #cecfcf inset;
+
+    >.headerBox {
+        height: auto;
+        width: 1000px;
+        display: flex;
+
+        >div:nth-of-type(1) {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+            >a {
+
+                >img {
+                    width: 132px;
+                }
+            }
+        }
+
+        >nav {
+            flex-grow: 1;
+            width: 500px;
+
+            >ul {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                >li {
+                    display: flex;
+                    justify-content: center;
+                    width: 90px;
+
+                    >a {
+                        font-size: 20px;
+                        transition: all 0.2s;
+                    }
+
+                    a:hover {
+                        color: #fe5341;
+                        transition: all 0.2s;
+                    }
+                }
+
+                >li:nth-of-type(1) {
+                    >a {
+                        color: black;
+                    }
+                }
+
+                >li:nth-of-type(3) {
+                    >a {
+                        color: #fe5341;
+                    }
+                }
+            }
+        }
+
+        >div:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+
+            >a:nth-of-type(1) {
+                width: 24px;
+                height: 26px;
+                background: url(../img/search.png) no-repeat;
+                margin-right: 30px;
+                transition: all 0.08s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            >a:nth-of-type(2) {
+                font-size: 16px;
+                width: 50px;
+                line-height: 30px;
+                border: 1px solid #fe5341;
+                text-align: center;
+                border-radius: 3px;
+                color: #fe5341;
+
+                &:hover {
+                    background-color: #fe5341;
+                    color: #fff;
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+}
+
+/* 底部 */
+footer {
+    width: 100%;
+    background-color: #505050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >.footertop {
+        padding-top: 40px;
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+
+        >dl {
+            dt {
+                color: white;
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            >dd {
+                font-size: 13px;
+                color: #a3a3a3;
+                line-height: 20px;
+
+                >a {
+                    color: #a3a3a3;
+                }
+            }
+        }
+
+        >dl:nth-of-type(1) {
+            width: 160px;
+            height: 160px;
+
+            >img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        >dl:nth-of-type(2) {
+            width: 140px;
+
+            >dd:nth-of-type(1) {
+                margin-bottom: 15px;
+
+            }
+        }
+
+        >dl:nth-of-type(3) {
+            width: 100px;
+        }
+
+        >dl:nth-of-type(4) {
+            width: 140px;
+
+            >dd {
+                >a {
+                    display: inline-block;
+                    width: 65px;
+                }
+            }
+        }
+
+        >dl:nth-of-type(5) {
+            width: 148px;
+        }
+
+        >dl:nth-of-type(6) {
+            width: 180px;
+        }
+    }
+
+    >.footerbottom {
+        margin-top: 80px;
+        margin-bottom: 15px;
+
+        >p {
+            text-align: center;
+            font-size: 13px;
+            color: #a3a3a3;
+        }
+    }
+}
+
+.playtop {
+    width: 1000px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        font-weight: normal;
+        padding: 34px 0 30px;
+    }
+
+    .play-nav {
+        text-align: center;
+        line-height: 1.7;
+
+        a {
+            color: #a3a3a3;
+            display: inline-block;
+            padding-bottom: 12px;
+            width: 165px;
+            font-size: 18px;
+        }
+    }
+}
+
+.on {
+    color: #fe5431 !important;
+    border-bottom: 4px #fe5431 solid;
+    padding-bottom: 8px;
+}
+
+.playbox {
+    background: #f7f7f7;
+    padding-top: 25px;
+
+    .box {
+        width: 1000px;
+        margin: auto;
+
+        .title {
+            position: relative;
+            padding: 18px 0 16px;
+            font-size: 20px;
+            font-weight: bold;
+
+            .more {
+                font-weight: normal;
+                position: absolute;
+                right: 0;
+                top: 22px;
+                padding-right: 17px;
+                font-size: 14px;
+                background: url(img/readMore.png) no-repeat right 5px;
+                color: #fd6959;
+            }
+        }
+
+        ul {
+            list-style: none;
+            // display: flex;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+                width: 220px;
+                height: 231px;
+                line-height: 21px;
+                border: 1px solid #e6e9e9;
+                border-radius: 6px;
+                background: #fff;
+                margin-bottom: 35px;
+
+                .info {
+                    padding: 0 10px 0 10px;
+                    height: 113px;
+                    background: url(../../css/img/listbg.jpg) no-repeat left bottom;
+                    background-size: 221px 19px;
+
+                    .tip {
+                        padding: 13px 0;
+                        color: #a3a3a3;
+                        font-size: 12px;
+                    }
+                }
+
+                img {
+                    border-radius: 6px 6px 0 0;
+                }
+
+                .name {
+                    font-size: 14px;
+                    height: 45px;
+                    overflow: hidden;
+                    word-break: break-all;
+                    // color: #a3a3a3;
+                    margin-top: 5px;
+                }
+
+                .left {
+                    color: #fe5431;
+                    font-size: 14px;
+                    float: left;
+                }
+
+                .right {
+                    float: right;
+
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-left: 14px;
+                        margin-left: 3px;
+                    }
+
+                    .xin {
+                        background: url(../../css/img/xin.png) no-repeat left center;
+                    }
+
+                    .look {
+                        background: url(../../img/reply.png) no-repeat left center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.playMore {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+
+
+    .more-btn {
+        background: url(../../css/img/more.png) no-repeat left center;
+        color: #fe5341;
+        padding-left: 24px;
+    }
+}
+
+#myDiv>li:last-child {
+    opacity: 0;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+img:hover {
+    animation: fade 1.2s ease-in infinite both;
+}
+
+dt:hover img {
+    animation: fade 1.2s ease-in infinite both;
+}
+
+li:hover img {
+    animation: fade 1.2s ease-in infinite both;
+}
