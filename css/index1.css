@@ -31,6 +31,7 @@
 .content .hifi .time {
   padding: 20px 0 16px 0;
   font-size: 18px;
+  letter-spacing: 2px;
 }
 .content .hifi .btn {
   float: right;
@@ -393,4 +394,12 @@ li:hover img {
 }
 #back:hover {
   background-color: #d4d4d4;
+}
+.btn {
+  width: 242px;
+  height: 48px;
+  background-color: #fe5341;
+  border: none;
+  color: white;
+  font-size: 24px;
 }
