@@ -260,7 +260,8 @@ footer > .footerbottom > p {
   background: url(../../css/img/xin.png) no-repeat left center;
 }
 .playbox .box ul li .right .look {
-  background: url(../../img/reply.png) no-repeat left center;
+  background: url(../../css/img/look.png) no-repeat left center;
+  background-size: 13px 13px;
 }
 .playMore {
   text-align: center;
@@ -294,4 +295,8 @@ dt:hover img {
 }
 li:hover img {
   animation: fade 1.2s ease-in infinite both;
+}
+#myDiv {
+  height: 780px;
+  overflow: hidden;
 }
