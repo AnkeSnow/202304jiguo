@@ -7,12 +7,21 @@
     <title>试用—大众试用</title>
     <link rel="stylesheet" href="../css/index.min.css">
     <link rel="stylesheet" href="./css/index.min.css">
+    <style>
+        .use-nav>a:nth-of-type(2) {
+            color: #474747;
+        }
+
+        .mind>li:last-child {
+            background-color: #f7f7f7;
+            border: none;
+        }
+
+        .mind>li:last-child>a {
+            cursor: default;
+        }
+    </style>
 </head>
-<style>
-    .use-nav>a:first-child {
-        color: #474747;
-    }
-</style>
 
 <body>
     <!-- 头部 -->
@@ -193,27 +202,4 @@
 </body>
 
 </html>
-<script src="./js/ajax.js"></script>
-<script>
-    /* 首发体验师样式 */
-    setTimeout(function () {
-        var ul_ = document.querySelector('.mind');
-        for (var item of ul_.children) {
-            var spanCl = item.firstElementChild.lastElementChild.lastElementChild;
-            var pCl = spanCl.previousElementSibling.previousElementSibling;
-            /* 灰色 绿色 红 */
-            if (spanCl.innerHTML == '查看试用名单') {
-                spanCl.className = 'spanGreen';
-                for (var k = 0; k < pCl.children.length; k++) {
-                    pCl.children[k].className = 'spanGreen';
-                }
-            } else if (spanCl.innerHTML == '剩余时间2天') {
-                spanCl.className = 'spanRed';
-                for (var k = 0; k < pCl.children.length; k++) {
-                    pCl.children[k].className = 'spanRed';
-                }
-            }
-        }
-    }, 10)
-
-</script>
+<script src="./js/sq.js"></script>
