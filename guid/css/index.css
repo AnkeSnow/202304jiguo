@@ -274,7 +274,7 @@ footer > .footerbottom > p {
   color: #fe5341;
   padding-left: 24px;
 }
-li:last-child {
+#myDiv > li:last-child {
   opacity: 0;
 }
 @keyframes fade {

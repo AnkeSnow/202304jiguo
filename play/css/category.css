@@ -54,3 +54,21 @@
 .reportbox dd:nth-of-type(2) .info {
   padding: 0px;
 }
+img:hover {
+  animation: fade 1.2s ease-in infinite both;
+}
+dt:hover img {
+  animation: fade 1.2s ease-in infinite both;
+}
+li:hover img {
+  animation: fade 1.2s ease-in infinite both;
+}
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+}

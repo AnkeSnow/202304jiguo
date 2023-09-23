@@ -370,6 +370,7 @@ li:hover img {
                     padding: 13px 0;
                     color: #a3a3a3;
                     font-size: 12px;
+                    position: relative;
                 }
             }
 
@@ -391,7 +392,11 @@ li:hover img {
             }
 
             .right {
-                float: right;
+                // float: right;
+                width: 70px;
+                position: absolute;
+                right: -10px;
+                bottom: -12px;
 
                 span {
                     display: inline-block;
@@ -402,14 +407,17 @@ li:hover img {
 
                 .zan {
                     background: url(img/zan.png) no-repeat left 4px;
+                    z-index: 99;
                 }
 
                 .xin {
                     background: url(img/xin.png) no-repeat left center;
+                    z-index: 99;
                 }
 
                 .look {
                     background: url(img/reply.png) no-repeat left center;
+                    z-index: 99;
                 }
             }
         }
@@ -435,6 +443,7 @@ li:hover img {
 
         .xin {
             background: url(img/xin.png) no-repeat left center;
+            z-index: 99;
         }
 
     }
