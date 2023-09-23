@@ -275,7 +275,8 @@ li:hover img {
 }
 .jingxuan .report ul li .right .look,
 .dao .report ul li .right .look {
-  background: url(img/reply.png) no-repeat left center;
+  background: url(img/look.png) no-repeat left center;
+  background-size: 13px 13px;
 }
 .title {
   position: relative;
@@ -360,7 +361,8 @@ li:hover img {
   z-index: 99;
 }
 .dao ul li .right .look {
-  background: url(img/reply.png) no-repeat left center;
+  background: url(img/look.png) no-repeat left center;
+  background-size: 13px 13px;
   z-index: 99;
 }
 .kuwan .name span {
@@ -410,4 +412,8 @@ li:hover img {
   border: none;
   color: white;
   font-size: 24px;
+}
+#myDiv {
+  height: 750px;
+  overflow: hidden;
 }

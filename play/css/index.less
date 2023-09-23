@@ -99,7 +99,8 @@ header {
                 }
             }
 
-            >a:nth-of-type(2) {
+            >a:nth-of-type(2),
+            >a:nth-of-type(3) {
                 font-size: 16px;
                 width: 50px;
                 line-height: 30px;
@@ -326,7 +327,8 @@ footer {
                     }
 
                     .look {
-                        background: url(../../img/reply.png) no-repeat left center;
+                        background: url(../../css/img/look.png) no-repeat left center;
+                        background-size: 13px 13px;
                     }
                 }
             }
@@ -371,4 +373,9 @@ dt:hover img {
 
 li:hover img {
     animation: fade 1.2s ease-in infinite both;
+}
+
+#myDiv {
+    height: 1000px;
+    overflow: hidden;
 }

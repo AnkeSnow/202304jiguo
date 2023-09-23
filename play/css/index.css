@@ -76,7 +76,8 @@ header > .headerBox > div:nth-of-type(2) > a:nth-of-type(1) {
 header > .headerBox > div:nth-of-type(2) > a:nth-of-type(1):hover {
   transform: scale(1.1);
 }
-header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2) {
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2),
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(3) {
   font-size: 16px;
   width: 50px;
   line-height: 30px;
@@ -85,7 +86,8 @@ header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2) {
   border-radius: 3px;
   color: #fe5341;
 }
-header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2):hover {
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2):hover,
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(3):hover {
   background-color: #fe5341;
   color: #fff;
   transition: all 0.2s;
@@ -261,7 +263,8 @@ footer > .footerbottom > p {
   background: url(../../css/img/xin.png) no-repeat left center;
 }
 .playbox .box ul li .right .look {
-  background: url(../../img/reply.png) no-repeat left center;
+  background: url(../../css/img/look.png) no-repeat left center;
+  background-size: 13px 13px;
 }
 .playMore {
   text-align: center;
@@ -292,4 +295,8 @@ dt:hover img {
 }
 li:hover img {
   animation: fade 1.2s ease-in infinite both;
+}
+#myDiv {
+  height: 1000px;
+  overflow: hidden;
 }
