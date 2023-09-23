@@ -7,12 +7,29 @@
     <title>试用—大众试用</title>
     <link rel="stylesheet" href="../css/index.min.css">
     <link rel="stylesheet" href="./css/index.min.css">
+    <style>
+        nav>div>a:first-child {
+            border: none;
+            color: #a3a3a3;
+        }
+
+        nav>div>a:last-child {
+            border-bottom: 4px #fe5431 solid;
+            color: #fe5431;
+        }
+
+        .mind>li:nth-last-child(2),
+        .mind>li:last-child {
+            background-color: #f7f7f7;
+            border: none;
+        }
+
+        .mind>li:nth-last-child(2)>a,
+        .mind>li:last-child>a {
+            cursor: default;
+        }
+    </style>
 </head>
-<style>
-    .use-nav>a:first-child {
-        color: #474747;
-    }
-</style>
 
 <body>
     <!-- 头部 -->
@@ -193,7 +210,7 @@
 </body>
 
 </html>
-<script src="./js/ajax.js"></script>
+<script src="./js/tys.js"></script>
 <script>
     /* 首发体验师样式 */
     setTimeout(function () {
