@@ -15,6 +15,39 @@
 </style>
 
 <body>
+    <!-- 登录 -->
+    <div class="masking">
+        <div class="login">
+            <div class="loginLeft">
+                <h3>极果帐号登录</h3>
+                <div>
+                    <input type="tel" name="tel" id="loginTelephone" placeholder="请输入登录的手机号">
+                    <p class="loginTelephoneText"></p>
+                    <input type="text" name="user" id="loginUser" placeholder="请输入登录的用户名">
+                    <p class="loginUserText"></p>
+                    <input type="password" name="password" id="loginPassword" placeholder="请输入登录密码">
+                    <p class="passwordText"></p>
+                    <button class="login_Button">登录</button>
+                </div>
+                <p><a href="./regist.html">注册新账号</a><a href="#">忘记密码？</a></p>
+            </div>
+            <div class="loginRight">
+                <h3>社交网络账号登录</h3>
+                <img src="./img/qrcode.jpg" alt="">
+                <div>
+                    <a
+                        href="http://m.jguo.com/mb/oauth/index/type/sina/id/1527475a83fed63795b8c40a72a9271a/coded/8f5b218b290ff02c4235a99722ac11cb.html?back_url=http%3A%2F%2Fwww.jiguo.com%2F">
+                        微博
+                    </a>
+                    <a
+                        href="http://m.jguo.com/mb/oauth/index/type/qq/id/1527475a83fed63795b8c40a72a9271a/coded/8f5b218b290ff02c4235a99722ac11cb.html?back_url=http%3A%2F%2Fwww.jiguo.com%2F">
+                        QQ
+                    </a>
+                </div>
+            </div>
+            <div class="close">×</div>
+        </div>
+    </div>
     <!-- 头部 -->
     <header>
         <div class="headerBox">
@@ -27,16 +60,17 @@
             <!-- 导航 -->
             <nav>
                 <ul>
-                    <li><a href="../index.html">首页</a></li>
-                    <li><a href="#">酷玩</a></li>
-                    <li><a href="#">导购</a></li>
-                    <li><a href="#">试用</a></li>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./play/index.html">酷玩</a></li>
+                    <li><a href="./guid/index.html">导购</a></li>
+                    <li><a href="./use/index.html">试用</a></li>
                     <li><a href="#">报告</a></li>
                 </ul>
             </nav>
             <!-- 搜索、注册 -->
             <div>
                 <a href="#"></a>
+                <a href="#" class="loginButton">登录</a>
                 <a href="#">注册</a>
             </div>
         </div>
@@ -58,25 +92,7 @@
     </div>
     <!-- 产品展示 -->
     <div class="etp">
-        <ul class="mind">
-            <!-- <li>
-                <a href="#">
-                    <span class="shoufa">首发</span>
-                    <img src="../img/hot5.jpg" alt="">
-                    <div class="etp_box">
-                        <h2>巴慕达 The Toaster 烤面包机</h2>
-                        <p>
-                            <span>2023</span>
-                            <span>20台</span>
-                        </p>
-                        <div class="sq">
-                            <span>1392</span>申请
-                        </div>
-                        <span>报告数量：8</span>
-                    </div>
-                </a>
-            </li> -->
-        </ul>
+        <ul class="mind"></ul>
     </div>
     <!-- 底部 -->
     <footer>
@@ -194,6 +210,7 @@
 
 </html>
 <script src="./js/ajax.js"></script>
+<script src="../js/index.js"></script>
 <script>
     /* 灰色 绿色 红 */
     setTimeout(function () {
