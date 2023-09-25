@@ -21,7 +21,7 @@ ajax_.onreadystatechange = function () {
                 // console.log(data[i].img);
                 // console.log(data[i].txt);
                 str += `<li>
-                <a href="#">
+                <a href="detail.html">
                     <span class="shoufa">${data[i].info_ty}</span>
                     <img src="${data[i].img}" alt="">
                     <div class="etp_box">

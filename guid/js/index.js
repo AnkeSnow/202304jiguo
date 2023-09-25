@@ -10,7 +10,7 @@ ajax_.onreadystatechange = function () {
             for (var i = 0; i < data.length; i++) {
                 str += `
                 <li>
-                <a href="use/detail.html">
+                <a href="detail.html">
                     <img src="${data[i].img}" width="220" height="130" />
                     <div class="info">
                         <p class="name">${data[i].text}</p>
@@ -34,7 +34,6 @@ ajax_.onreadystatechange = function () {
     var xin = document.getElementsByClassName('xin');
 
     var look = document.getElementsByClassName('look');
-    var num = 3;
     for (var i = 0; i < xin.length; i++) {
         xin[i].onclick = function (e) {
             e.returnValue = false;

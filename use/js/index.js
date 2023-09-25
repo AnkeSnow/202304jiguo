@@ -33,7 +33,7 @@ function show(val) {
         // console.log(data[i].img);
         // console.log(data[i].txt);
         str += `<li>
-                <a href="#">
+                <a href="detail.html">
                     <span class="shoufa">${val[i].info_ty}</span>
                     <img src="${val[i].img}" alt="">
                     <div class="etp_box">
