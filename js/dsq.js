@@ -195,7 +195,6 @@ login_Button.onclick = function () {
 }
 
 // 判断是否登录
-
 var logins = sessionStorage.getItem('login');
 if (logins == 'true') {
     var account = document.getElementsByClassName('account')[0];
@@ -206,21 +205,11 @@ if (logins == 'true') {
     var user = sessionStorage.getItem('user');
     var account = document.getElementsByClassName('account')[0].lastElementChild.firstElementChild;
     account.innerHTML = user;
-    var shen = document.getElementById('shen');
-    var tai = document.getElementById('tai');
-    var btn = document.getElementsByClassName('btn')[0];
-    var num1 = 126;
-    var num2 = 20;
-    btn.onclick = function () {
-        shen.innerHTML = `${++num1}人申请`
-        tai.innerHTML = `${--num2}台`
-        btn.disabled = 'true'
-        btn.style.backgroundColor = 'gray'
-        btn.style.opacity = '.6'
-    }
 }
 
 var close_ = document.getElementsByClassName('close')[0];
 close_.onclick = function () {
     masking.style.display = 'none';
 }
+
+
