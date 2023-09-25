@@ -9,7 +9,7 @@
 var djs = document.getElementById('djs');
 
 var timer = setInterval(function () {
-    var mb = new Date(2023, 11, 11);
+    var mb = new Date(2023, 10, 11);
     var time = new Date();
     var gap = mb - time;
     var date = parseInt(gap / 1000 / 60 / 60 / 24);
@@ -191,6 +191,27 @@ login_Button.onclick = function () {
         var user = sessionStorage.getItem('user');
         var account = document.getElementsByClassName('account')[0].lastElementChild.firstElementChild;
         account.innerHTML = user;
+        var cg = sessionStorage.getItem('login');
+        if (cg == 'true') {
+            var shen = document.getElementById('shen');
+            var tai = document.getElementById('tai');
+            var btn = document.getElementsByClassName('btn')[0];
+            var num1 = 126;
+            var num2 = 20;
+            btn.onclick = function () {
+                shen.innerHTML = `${++num1}人申请`
+                tai.innerHTML = `${--num2}台`
+                btn.disabled = 'true'
+                btn.style.backgroundColor = 'gray'
+                btn.style.opacity = '.6';
+
+            }
+        } else if (cg != 'true') {
+            btn.onclick = function () {
+                console.log(1);
+                masking.style.display = 'block';
+            }
+        }
     }
 }
 
