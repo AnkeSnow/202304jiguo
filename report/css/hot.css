@@ -82,3 +82,12 @@ main > .container > article > ul > li > a > div > div > div:nth-of-type(2) > spa
   background: url(../../css/img/look.png) no-repeat center;
   background-size: 13px 13px;
 }
+
+main > .container > article > ul > li:nth-of-type(14),
+main > .container > article > ul > li:nth-of-type(15),
+main > .container > article > ul > li:nth-of-type(16),
+main > .container > article > ul > li:nth-of-type(17),
+main > .container > article > ul > li:nth-of-type(18),
+main > .container > article > ul > li:nth-of-type(19) {
+  display: none;
+}

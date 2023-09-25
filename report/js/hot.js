@@ -89,14 +89,12 @@ more.onclick = function () {
     upload.style.display = 'block';
     setTimeout(function () {
         upload.parentNode.style.display = 'none';
-        document.getElementsByTagName('article')[0].firstElementChild.children[30].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[31].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[32].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[33].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[34].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[35].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[36].style.display = 'block';
-        document.getElementsByTagName('article')[0].firstElementChild.children[37].style.display = 'block';
+        document.getElementsByTagName('article')[0].firstElementChild.children[13].style.display = 'block';
+        document.getElementsByTagName('article')[0].firstElementChild.children[14].style.display = 'block';
+        document.getElementsByTagName('article')[0].firstElementChild.children[15].style.display = 'block';
+        document.getElementsByTagName('article')[0].firstElementChild.children[16].style.display = 'block';
+        document.getElementsByTagName('article')[0].firstElementChild.children[17].style.display = 'block';
+        document.getElementsByTagName('article')[0].firstElementChild.children[18].style.display = 'block';
     }, 3000)
 }
 // ajax
@@ -133,7 +131,6 @@ ajax.onreadystatechange = function () {
                 ul_.innerHTML = str;
             }
             var xin = document.querySelectorAll('.xin');
-            console.log(xin);
             var look = document.getElementsByClassName('look');
             for (var i = 0; i < xin.length; i++) {
                 xin[i].onclick = function (e) {
