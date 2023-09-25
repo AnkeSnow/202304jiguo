@@ -101,6 +101,10 @@ nav {
             border-radius: 6px;
             overflow: hidden;
 
+            &:hover>a>img {
+                animation: fade 1.2s ease-in infinite both;
+            }
+
             a {
                 width: 100%;
                 height: 100%;
@@ -225,5 +229,18 @@ nav {
         span {
             color: #fe5341;
         }
+    }
+}
+
+/* 悬浮隐藏动画 */
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
     }
 }
