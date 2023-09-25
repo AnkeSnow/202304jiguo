@@ -1,0 +1,17 @@
+main > .container > article > ul > li:nth-of-type(23),
+main > .container > article > ul > li:nth-of-type(24),
+main > .container > article > ul > li:nth-of-type(25),
+main > .container > article > ul > li:nth-of-type(26) {
+  display: block;
+}
+
+main > .container > article > ul > li:nth-of-type(31),
+main > .container > article > ul > li:nth-of-type(32),
+main > .container > article > ul > li:nth-of-type(33),
+main > .container > article > ul > li:nth-of-type(34),
+main > .container > article > ul > li:nth-of-type(35),
+main > .container > article > ul > li:nth-of-type(36),
+main > .container > article > ul > li:nth-of-type(37),
+main > .container > article > ul > li:nth-of-type(38) {
+  display: none;
+}
