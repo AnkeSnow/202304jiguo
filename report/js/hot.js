@@ -129,9 +129,6 @@ ajax.onreadystatechange = function () {
         </div>
     </a>
 </li>
-<li> 
-<a href="#">${item.text}还有 4 篇报告，点击查看</a>
-</li>
 `
                 ul_.innerHTML = str;
             }
