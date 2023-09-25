@@ -145,7 +145,6 @@ for (var i = 0; i < look.length; i++) {
     }
 }
 var divs = document.getElementById('myDiv');
-console.log(divs);
 function show1() {
 
     divs.style.height = 'auto';
