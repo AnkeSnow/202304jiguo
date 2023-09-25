@@ -109,7 +109,7 @@ window.onscroll = function () {
     if (winHeight + scroolTop + 222 >= scroolH) {
         var more = document.querySelector('.playMore');
         var bg = document.querySelector('.comMore');
-        bg.style.background = 'url(../css/img/loading-icon.gif) no-repeat'
+        bg.style.background = 'url(./css/img/loading-icon.gif) no-repeat'
         bg.innerHTML = '正在加载中';
         setTimeout(show1, 800);
     }
