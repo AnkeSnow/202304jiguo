@@ -1,0 +1,26 @@
+main {
+    >.container {
+        >article {
+            >ul {
+
+                >li:nth-of-type(23),
+                >li:nth-of-type(24),
+                >li:nth-of-type(25),
+                >li:nth-of-type(26) {
+                    display: block;
+                }
+
+                >li:nth-of-type(31),
+                >li:nth-of-type(32),
+                >li:nth-of-type(33),
+                >li:nth-of-type(34),
+                >li:nth-of-type(35),
+                >li:nth-of-type(36),
+                >li:nth-of-type(37),
+                >li:nth-of-type(38) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
