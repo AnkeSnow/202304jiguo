@@ -8,7 +8,7 @@ ajax.onreadystatechange = function () {
             var json_ = JSON.parse(ajax.responseText);
             var str = ``;
             var ul_ = document.getElementsByClassName('container')[1].lastElementChild;
-            console.log(ul_);
+            // console.log(ul_);
             for (var i = 0; i < 4; i++) {
                 str +=
                     `

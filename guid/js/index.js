@@ -68,7 +68,6 @@ ajax_.onreadystatechange = function () {
     }
 }
 var divs = document.getElementById('myDiv');
-console.log(divs);
 function show1() {
 
     divs.style.height = 'auto';
