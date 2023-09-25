@@ -1,6 +1,8 @@
-window.onload = function () {
-    setTimeout(getData, 10);
-};
+// window.onload = function () {
+//     setTimeout(getData, 10);
+// };
+setTimeout(getData, 10);
+
 //试用页面渲染数据
 var ul_ = document.getElementsByClassName('mind');
 function getData() {
