@@ -98,10 +98,10 @@
   border-right: 1px solid #ebeaea;
 }
 .box .detail .detaRight ul li:first-child:hover > a > p {
-  color: #fe5341;
+  color: #fe5341 !important;
 }
 .box .detail .detaRight ul li:first-child:hover > a > span {
-  background: url(../../img/xinRedh.png) no-repeat center center;
+  background: url(../../img/xinRedh.png) no-repeat center center !important;
 }
 .box .detail .detaRight ul li:first-child a span {
   display: block;
@@ -111,10 +111,10 @@
   background: url(../../img/xinRedo.png) no-repeat center center;
 }
 .box .detail .detaRight ul li:last-child:hover > a > p {
-  color: #fe5341;
+  color: #fe5341 !important;
 }
 .box .detail .detaRight ul li:last-child:hover > a > span {
-  background: url(../../img/shareh_yj1.png) no-repeat center center;
+  background: url(../../img/shareh_yj1.png) no-repeat center center !important;
 }
 .box .detail .detaRight ul li:last-child a span {
   display: block;
