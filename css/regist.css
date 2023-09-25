@@ -200,6 +200,10 @@ header > .headerBox > nav > ul > li a:hover {
   transition: all 0.2s;
 }
 
+header > .headerBox > nav > ul > li:nth-of-type(1) > a {
+  color: #fe5341;
+}
+
 header > .headerBox > div:nth-of-type(2) {
   display: flex;
   align-items: center;
@@ -217,7 +221,8 @@ header > .headerBox > div:nth-of-type(2) > a:nth-of-type(1):hover {
 }
 
 header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2),
-header > .headerBox > div:nth-of-type(2) a:nth-of-type(3) {
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(3) {
+  display: block;
   font-size: 16px;
   width: 50px;
   line-height: 30px;
@@ -229,10 +234,34 @@ header > .headerBox > div:nth-of-type(2) a:nth-of-type(3) {
 }
 
 header > .headerBox > div:nth-of-type(2) > a:nth-of-type(2):hover,
-header > .headerBox > div:nth-of-type(2) a:nth-of-type(3):hover {
+header > .headerBox > div:nth-of-type(2) > a:nth-of-type(3):hover {
   background-color: #fe5341;
   color: #fff;
   transition: all 0.2s;
+}
+
+header > .headerBox > div:nth-of-type(2) > .account {
+  display: none;
+}
+
+header > .headerBox > div:nth-of-type(2) > .account > div {
+  float: left;
+  margin-left: 15px;
+}
+
+header > .headerBox > div:nth-of-type(2) > .account > div:nth-of-type(1) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+header > .headerBox > div:nth-of-type(2) > .account > div:nth-of-type(1) > img {
+  width: 100%;
+  height: 100%;
+}
+
+header > .headerBox > div:nth-of-type(2) > .account > div:nth-of-type(2) > span {
+  line-height: 40px;
 }
 
 /* 正文 */

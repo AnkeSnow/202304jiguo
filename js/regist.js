@@ -15,7 +15,6 @@ login_Button.onclick = function () {
     var loginTelephoneText = document.getElementsByClassName('loginTelephoneText')[0]
     var loginUserText = document.getElementsByClassName('loginUserText')[0];
     var passwordText = document.getElementsByClassName('passwordText')[0];
-    console.log(loginTelephone.value);
     if (loginTelephone.value == '') {
         loginTelephoneText.style.opacity = '1';
         loginTelephoneText.innerHTML = '输入不能为空';
@@ -46,7 +45,7 @@ login_Button.onclick = function () {
         setTimeout(function () {
             loginUserText.style.opacity = '0';
         }, 3000)
-    } else if (loginPassword.value == password) {
+    } else if (loginPassword.value != password) {
         passwordText.style.opacity = '1';
         passwordText.innerHTML = '密码错误';
         setTimeout(function () {
@@ -55,8 +54,30 @@ login_Button.onclick = function () {
     } else {
         alert('登录成功');
         masking.style.display = 'none';
+        sessionStorage.setItem('login', 'true');
+        var account = document.getElementsByClassName('account')[0];
+        account.style.display = 'block';
+        var headerBox = document.getElementsByClassName('headerBox')[0];
+        headerBox.children[2].children[1].style.display = 'none';
+        headerBox.children[2].children[2].style.display = 'none';
+        var user = sessionStorage.getItem('user');
+        var account = document.getElementsByClassName('account')[0].lastElementChild.firstElementChild;
+        account.innerHTML = user;
     }
 }
+
+// 判断是否登录
+window.onabort = function () {
+    var logins = sessionStorage.getItem('login');
+    if (logins == true) {
+        var account = document.getElementsByClassName('account')[0];
+        account.style.display = 'block';
+        var headerBox = document.getElementsByClassName('headerBox')[0];
+        headerBox.children[2].children[1].display = 'none';
+        headerBox.children[2].children[2].display = 'none';
+    }
+}
+
 var close_ = document.getElementsByClassName('close')[0];
 close_.onclick = function () {
     masking.style.display = 'none';
@@ -179,7 +200,7 @@ user.onblur = function () {
 // 密码
 var password = document.getElementById('password');
 var passwordJudge = false;
-var passwordText = document.getElementsByClassName('passwordText')[0];
+var passwordText = document.getElementsByClassName('passwordText')[1];
 password.onblur = function () {
     if (this.value == '') {
         passwordText.style.color = 'red';
@@ -245,6 +266,7 @@ logup.onclick = function () {
         sessionStorage.setItem('tel', telephone.value);
         sessionStorage.setItem('user', user.value);
         sessionStorage.setItem('password', password.value);
+        sessionStorage.setItem('login', 'false');
         alert('注册成功!');
         telephone.value = '';
         checkCode.value = '';
