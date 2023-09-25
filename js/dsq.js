@@ -53,31 +53,33 @@ for (var i = 0; i < xin.length; i++) {
 for (var i = 0; i < zan.length; i++) {
     zan[i].onclick = function (e) {
         e.returnValue = false;
+        var num = this.innerHTML;
         if (this.style.color != 'red') {
-            this.style.background = 'url(../css/img/dazan.png) no-repeat left center'
+            this.style.background = 'url(./css/img/dazan.png) no-repeat left center'
             this.style.color = 'red'
             this.style.backgroundSize = '16px 16px'
-            this.innerHTML = '4'
+            this.innerHTML = ++num;
         } else {
             this.style.color = '#a3a3a3'
-            this.style.background = 'url(../css/img/zan.png) no-repeat left center'
-            this.innerHTML = '3'
+            this.style.background = 'url(./css/img/zan.png) no-repeat left center'
+            this.innerHTML = --num;
         }
     }
 }
 for (var i = 0; i < look.length; i++) {
     look[i].onclick = function (e) {
         e.returnValue = false;
+        var num = this.innerHTML;
         if (this.style.color != 'red') {
-            this.style.background = 'url(../css/img/look1.png) no-repeat left center'
+            this.style.background = 'url(./css/img/look1.png) no-repeat left center'
             this.style.color = 'red'
             this.style.backgroundSize = '13px 13px'
-            this.innerHTML = '4'
+            this.innerHTML = ++num
         } else {
             this.style.color = '#a3a3a3'
-            this.style.background = 'url(../css/img/look.png) no-repeat left center'
+            this.style.background = 'url(./css/img/look.png) no-repeat left center'
             this.style.backgroundSize = '13px 13px'
-            this.innerHTML = '3'
+            this.innerHTML = --num;
         }
     }
 }
