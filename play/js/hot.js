@@ -16,7 +16,7 @@ ajax_.onreadystatechange = function () {
                     console.log(item[i].img);
                     console.log(item[i].text);
                     str += `<li>
-                <a href="use/detail.html">
+                <a href="../use/detail.html">
                     <img src="${item[i].img}" width="220" height="130" />
                     <div class="info">
                         <p class="name">全新智能眼镜<span>${item[i].text}</span></p>

@@ -371,3 +371,21 @@ main > .container > aside > div:nth-of-type(3) {
   color: #fe5341;
   font-size: 14px;
 }
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+li:hover img {
+  animation: fade 1.2s ease-in infinite both;
+}
+
+img:hover {
+  animation: fade 1.2s ease-in infinite both;
+}
