@@ -90,6 +90,15 @@ main {
                         }
                     }
                 }
+
+                >li:nth-of-type(14),
+                >li:nth-of-type(15),
+                >li:nth-of-type(16),
+                >li:nth-of-type(17),
+                >li:nth-of-type(18),
+                >li:nth-of-type(19) {
+                    display: none;
+                }
             }
         }
     }
