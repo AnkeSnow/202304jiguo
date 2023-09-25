@@ -67,14 +67,17 @@ login_Button.onclick = function () {
 }
 
 // 判断是否登录
-window.onabort = function () {
+window.onload = function () {
     var logins = sessionStorage.getItem('login');
-    if (logins == true) {
+    if (logins == 'true') {
         var account = document.getElementsByClassName('account')[0];
         account.style.display = 'block';
         var headerBox = document.getElementsByClassName('headerBox')[0];
-        headerBox.children[2].children[1].display = 'none';
-        headerBox.children[2].children[2].display = 'none';
+        headerBox.children[2].children[1].style.display = 'none';
+        headerBox.children[2].children[2].style.display = 'none';
+        var user = sessionStorage.getItem('user');
+        var account = document.getElementsByClassName('account')[0].lastElementChild.firstElementChild;
+        account.innerHTML = user;
     }
 }
 var close_ = document.getElementsByClassName('close')[0];
