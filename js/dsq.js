@@ -39,13 +39,13 @@ for (var i = 0; i < xin.length; i++) {
     xin[i].onclick = function (e) {
         e.returnValue = false;
         if (this.style.color != 'red') {
-            this.style.background = 'url(../css/img/xinRedh.png) no-repeat left center'
+            this.style.background = 'url(./css/img/xinRedh.png) no-repeat left center'
             this.style.color = 'red'
             this.style.backgroundSize = '13px 13px'
             this.innerHTML = '4'
         } else {
             this.style.color = '#a3a3a3'
-            this.style.background = 'url(../css/img/xin.png) no-repeat left center'
+            this.style.background = 'url(./css/img/xin.png) no-repeat left center'
             this.innerHTML = '3'
         }
     }
@@ -109,7 +109,7 @@ window.onscroll = function () {
     if (winHeight + scroolTop + 222 >= scroolH) {
         var more = document.querySelector('.playMore');
         var bg = document.querySelector('.comMore');
-        bg.style.background = 'url(../css/img/loading-icon.gif) no-repeat'
+        bg.style.background = 'url(./css/img/loading-icon.gif) no-repeat'
         bg.innerHTML = '正在加载中';
         setTimeout(show1, 800);
     }
