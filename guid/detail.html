@@ -55,11 +55,11 @@
             <!-- 导航 -->
             <nav>
                 <ul>
-                    <li><a href="./index.html">首页</a></li>
-                    <li><a href="./play/index.html">酷玩</a></li>
-                    <li><a href="./guid/index.html">导购</a></li>
-                    <li><a href="./use/index.html">试用</a></li>
-                    <li><a href="#">报告</a></li>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../play/index.html">酷玩</a></li>
+                    <li><a href="../guid/index.html">导购</a></li>
+                    <li><a href="../use/index.html">试用</a></li>
+                    <li><a href="../report/index.html">报告</a></li>
                 </ul>
             </nav>
             <!-- 搜索、注册 -->
@@ -166,14 +166,14 @@
                 <ul>
                     <li>
                         <a href="javaScript:;">
-                            <span></span>
-                            <p>喜欢 15</p>
+                            <span class="bb"></span>
+                            <p class="like">喜欢 <i style="font-style: normal;">15</i></p>
                         </a>
                     </li>
                     <li>
                         <a href="javaScript:;">
-                            <span></span>
-                            <p>分享</p>
+                            <span class="sharetp"></span>
+                            <p class="share">分享</p>
                         </a>
                     </li>
                 </ul>
@@ -297,4 +297,32 @@
 
 </html>
 <script src="../js/index.js"></script>
+<script>
+    var like = document.getElementsByClassName('like')[0];
+    var bb = document.getElementsByClassName('bb')[0];
+    var num = like.firstElementChild.innerHTML;
+    like.parentNode.onclick = function () {
+        // console.log(1);
+        if (like.style.color != 'red') {
+            like.style.color = 'red';
+            bb.style.background = 'url(../../img/xinRedh.png) no-repeat center center'
+            like.firstElementChild.innerHTML = ++num;
+        } else {
+            like.style.color = '#a3a3a3';
+            bb.style.background = 'url(../../img/xinRedo.png) no-repeat center center'
+            like.firstElementChild.innerHTML = --num;
+        }
+    }
+    var share = document.getElementsByClassName('share')[0];
+    var tp = document.getElementsByClassName('sharetp')[0];
+    share.parentNode.onclick = function () {
+        if (share.style.color != 'red') {
+            share.style.color = 'red';
+            tp.style.background = 'url(../../img/shareh_yj1.png) no-repeat center center'
+        } else {
+            share.style.color = '#a3a3a3';
+            tp.style.background = 'url(../../img/share_yj1.png) no-repeat center center'
+        }
+    }
+</script>
 <!-- <script src="./js/index.js"></script> -->

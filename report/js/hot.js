@@ -102,8 +102,8 @@ ajax.onreadystatechange = function () {
                     <i></i><span>${item.uName}</span><span>${item.endTime}</span>
                 </div>
                 <div>
-                    <span>3</span>
-                    <span>3</span>
+                    <span class='xin'>3</span>
+                    <span class='look'>3</span>
                 </div>
             </div>
         </div>
@@ -114,6 +114,44 @@ ajax.onreadystatechange = function () {
 </li>
 `
                 ul_.innerHTML = str;
+            }
+            var xin = document.querySelectorAll('.xin');
+            console.log(xin);
+            var look = document.getElementsByClassName('look');
+            for (var i = 0; i < xin.length; i++) {
+                xin[i].onclick = function (e) {
+
+                    e.returnValue = false;
+                    var num = this.innerHTML;
+                    console.log(num);
+                    if (this.style.color != 'red') {
+                        this.style.background = 'url(../css/img/dazan.png) no-repeat center center'
+                        this.style.color = 'red'
+                        this.style.backgroundSize = '15px 15px'
+                        this.innerHTML = ++num;
+                    } else {
+                        this.style.color = '#a3a3a3'
+                        this.style.background = 'url(../css/img/zan.png) no-repeat center center'
+                        this.innerHTML = --num;
+                    }
+                }
+            }
+            for (var i = 0; i < look.length; i++) {
+                look[i].onclick = function (e) {
+                    e.returnValue = false;
+                    var num = this.innerHTML;
+                    if (this.style.color != 'red') {
+                        this.style.background = 'url(../css/img/look1.png) no-repeat center center'
+                        this.style.color = 'red'
+                        this.style.backgroundSize = '13px 13px'
+                        this.innerHTML = ++num
+                    } else {
+                        this.style.color = '#a3a3a3'
+                        this.style.background = 'url(../css/img/look.png) no-repeat center center'
+                        this.style.backgroundSize = '13px 13px'
+                        this.innerHTML = --num;
+                    }
+                }
             }
         }
     }
