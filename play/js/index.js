@@ -12,7 +12,7 @@ ajax_.onreadystatechange = function () {
             for (var item of data) {
                 for (var i = 0; i < item.length; i++) {
                     str += `<li>
-                <a href="use/detail.html">
+                <a href="../use/detail.html">
                     <img src="${item[i].img}" width="220" height="130" />
                     <div class="info">
                         <p class="name">全新智能眼镜<span>${item[i].text}</span></p>
@@ -58,16 +58,17 @@ ajax_.onreadystatechange = function () {
     for (var i = 0; i < look.length; i++) {
         look[i].onclick = function (e) {
             e.returnValue = false;
+            var num = this.innerHTML;
             if (this.style.color != 'red') {
                 this.style.background = 'url(../css/img/look1.png) no-repeat left center'
                 this.style.color = 'red'
                 this.style.backgroundSize = '13px 13px'
-                this.innerHTML = '6'
+                this.innerHTML = ++num
             } else {
                 this.style.color = '#a3a3a3'
                 this.style.background = 'url(../css/img/look.png) no-repeat left center'
                 this.style.backgroundSize = '13px 13px'
-                this.innerHTML = '5'
+                this.innerHTML = --num;
             }
         }
     }
