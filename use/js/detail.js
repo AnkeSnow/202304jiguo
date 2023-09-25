@@ -136,3 +136,18 @@ var close_ = document.getElementsByClassName('close')[0];
 close_.onclick = function () {
     masking.style.display = 'none';
 }
+
+//倒计时
+var djs = document.getElementById('djs');
+
+var timer = setInterval(function () {
+    var mb = new Date(2023, 10, 11);
+    var time = new Date();
+    var gap = mb - time;
+    var date = parseInt(gap / 1000 / 60 / 60 / 24);
+    var hour = parseInt(gap / 1000 / 60 / 60 % 24);
+    var minute = parseInt(gap / 1000 / 60 % 60);
+    var second = parseInt(gap / 1000 % 60);
+    var str = '申请时间剩余:' + '&nbsp;&nbsp;' + date + '天' + hour + '时' + minute + '分' + second + '秒';
+    djs.innerHTML = str;
+}, 1000)
