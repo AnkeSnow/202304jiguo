@@ -133,7 +133,6 @@ ajax.onreadystatechange = function () {
                 ul_.innerHTML = str;
             }
             var xin = document.querySelectorAll('.xin');
-            console.log(xin);
             var look = document.getElementsByClassName('look');
             for (var i = 0; i < xin.length; i++) {
                 xin[i].onclick = function (e) {
