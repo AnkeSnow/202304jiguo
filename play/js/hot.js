@@ -10,11 +10,7 @@ ajax_.onreadystatechange = function () {
             var data = JSON.parse(ajax_.responseText);
             var str = '';
             for (var item of data) {
-                console.log(item);
-                // console.log(data);
                 for (var i = 0; i < item.length; i++) {
-                    console.log(item[i].img);
-                    console.log(item[i].text);
                     str += `<li>
                 <a href="../use/detail.html">
                     <img src="${item[i].img}" width="220" height="130" />
@@ -47,7 +43,6 @@ ajax_.onreadystatechange = function () {
 
             e.returnValue = false;
             var num = this.innerHTML;
-            console.log(num);
             if (this.style.color != 'red') {
                 this.style.background = 'url(../css/img/xinRedh.png) no-repeat left center'
                 this.style.color = 'red'
@@ -78,7 +73,6 @@ ajax_.onreadystatechange = function () {
     }
 }
 var divs = document.getElementById('myDiv');
-console.log(divs);
 function show1() {
 
     divs.style.height = 'auto';
