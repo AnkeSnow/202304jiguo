@@ -85,3 +85,5 @@ var close_ = document.getElementsByClassName('close')[0];
 close_.onclick = function () {
     masking.style.display = 'none';
 }
+
+

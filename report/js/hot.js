@@ -114,7 +114,7 @@ ajax.onreadystatechange = function () {
                 str +=
                     `
 <li>
-    <a href="#">
+    <a href="../guid/detail.html">
         <img src='${item.img}'>
         <div>
             <p>${item.text}</p>
