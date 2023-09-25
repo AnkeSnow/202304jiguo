@@ -322,3 +322,17 @@
 </html>
 <script src="../js/index.js"></script>
 <script src="./js/detail.js"></script>
+<script>
+    var shen = document.getElementById('shen');
+    var tai = document.getElementById('tai');
+    var btn = document.getElementsByClassName('btn')[0];
+    var num1 = 126;
+    var num2 = 20;
+    btn.onclick = function () {
+        shen.innerHTML = `${++num1}人申请`
+        tai.innerHTML = `${--num2}台`
+        btn.disabled = 'true'
+        btn.style.backgroundColor = 'gray'
+        btn.style.opacity = '.6'
+    }
+</script>
