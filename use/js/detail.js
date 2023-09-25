@@ -8,7 +8,6 @@ ajax.onreadystatechange = function () {
             var json_ = JSON.parse(ajax.responseText);
             var str = ``;
             var ul_ = document.getElementsByClassName('container')[1].lastElementChild;
-            // console.log(ul_);
             for (var i = 0; i < 4; i++) {
                 str +=
                     `
@@ -29,4 +28,111 @@ ajax.onreadystatechange = function () {
             }
         }
     }
+}
+
+// 登录
+var loginButton = document.getElementsByClassName('loginButton')[0];
+var masking = document.getElementsByClassName('masking')[0];
+loginButton.onclick = function () {
+    masking.style.display = 'block';
+}
+var login_Button = document.getElementsByClassName('login_Button')[0];
+login_Button.onclick = function () {
+    var loginTelephone = document.getElementById('loginTelephone');
+    var loginUser = document.getElementById('loginUser');
+    var loginPassword = document.getElementById('loginPassword');
+    var tel = JSON.parse(sessionStorage.getItem('tel'));
+    var user = sessionStorage.getItem('user');
+    var password = sessionStorage.getItem('password');
+    var loginTelephoneText = document.getElementsByClassName('loginTelephoneText')[0]
+    var loginUserText = document.getElementsByClassName('loginUserText')[0];
+    var passwordText = document.getElementsByClassName('passwordText')[0];
+    if (loginTelephone.value == '') {
+        loginTelephoneText.style.opacity = '1';
+        loginTelephoneText.innerHTML = '输入不能为空';
+        setTimeout(function () {
+            loginTelephoneText.style.opacity = '0';
+        }, 3000)
+    } else if (loginUser.value == '') {
+        loginUserText.style.opacity = '1';
+        loginUserText.innerHTML = '输入不能为空';
+        setTimeout(function () {
+            loginUserText.style.opacity = '0';
+        }, 3000)
+    } else if (loginPassword.value == '') {
+        passwordText.style.opacity = '1';
+        passwordText.innerHTML = '输入不能为空';
+        setTimeout(function () {
+            passwordText.style.opacity = '0';
+        }, 3000)
+    } else if (loginTelephone.value != tel) {
+        loginTelephoneText.style.opacity = '1';
+        loginTelephoneText.innerHTML = '手机号未查询到注册';
+        setTimeout(function () {
+            loginTelephoneText.style.opacity = '0';
+        }, 3000)
+    } else if (loginUser.value != user) {
+        loginUserText.style.opacity = '1';
+        loginUserText.innerHTML = '用户名未查询到注册';
+        setTimeout(function () {
+            loginUserText.style.opacity = '0';
+        }, 3000)
+    } else if (loginPassword.value != password) {
+        passwordText.style.opacity = '1';
+        passwordText.innerHTML = '密码错误';
+        setTimeout(function () {
+            passwordText.style.opacity = '0';
+        }, 3000)
+    } else {
+        alert('登录成功');
+        masking.style.display = 'none';
+        sessionStorage.setItem('login', 'true');
+        var account = document.getElementsByClassName('account')[0];
+        account.style.display = 'block';
+        var headerBox = document.getElementsByClassName('headerBox')[0];
+        headerBox.children[2].children[1].style.display = 'none';
+        headerBox.children[2].children[2].style.display = 'none';
+        var user = sessionStorage.getItem('user');
+        var account = document.getElementsByClassName('account')[0].lastElementChild.firstElementChild;
+        account.innerHTML = user;
+        var cg = sessionStorage.getItem('login');
+        if (cg == 'true') {
+            var shen = document.getElementById('shen');
+            var tai = document.getElementById('tai');
+            var btn = document.getElementsByClassName('btn')[0];
+            var num1 = 126;
+            var num2 = 20;
+            btn.onclick = function () {
+                shen.innerHTML = `${++num1}人申请`
+                tai.innerHTML = `${--num2}台`
+                btn.disabled = 'true'
+                btn.style.backgroundColor = 'gray'
+                btn.style.opacity = '.6';
+
+            }
+        } else if (cg != 'true') {
+            btn.onclick = function () {
+                console.log(1);
+                masking.style.display = 'block';
+            }
+        }
+    }
+}
+
+// 判断是否登录
+var logins = sessionStorage.getItem('login');
+if (logins == 'true') {
+    var account = document.getElementsByClassName('account')[0];
+    account.style.display = 'block';
+    var headerBox = document.getElementsByClassName('headerBox')[0];
+    headerBox.children[2].children[1].style.display = 'none';
+    headerBox.children[2].children[2].style.display = 'none';
+    var user = sessionStorage.getItem('user');
+    var account = document.getElementsByClassName('account')[0].lastElementChild.firstElementChild;
+    account.innerHTML = user;
+}
+
+var close_ = document.getElementsByClassName('close')[0];
+close_.onclick = function () {
+    masking.style.display = 'none';
 }

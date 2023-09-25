@@ -95,7 +95,6 @@ function show1() {
 }
 
 var bg = document.querySelector('.comMore');
-
 window.onscroll = function () {
     var winHeight =
         document.documentElement.clientHeight || document.body.clientHeight;
