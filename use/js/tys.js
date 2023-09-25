@@ -33,7 +33,7 @@ function show(val) {
         // console.log(data[i].img);
         // console.log(data[i].txt);
         str += `<li>
-                <a href="#">
+                <a href="detail.html">
                     <span class="shoufa">体验师专享</span>
                     <img src="${val[i].img}" alt="">
                     <div class="etp_box">
@@ -74,7 +74,7 @@ function show(val) {
 function show1() {
     var etp = document.querySelector('.etp');
     etp.style.height = 'auto';
-    // console.log(p);
+    console.log(1);
     var more = document.querySelector('.more').firstElementChild;
     var img = more.firstElementChild;
     var span = more.lastElementChild;

@@ -13,7 +13,7 @@ ajax.onreadystatechange = function () {
                 str +=
                     `
 <li>
-<a href="#">
+<a href="detail.html">
     <span>${json_[i].info_ty}</span>
     <img src="${json_[i].img}" alt="">
     <div>
